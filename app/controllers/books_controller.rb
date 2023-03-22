@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def create
-    book = Book.index(book_params)
+    book = Book.new(book_params)
     book.save
     redirect_to book_path(book.id)
   end
